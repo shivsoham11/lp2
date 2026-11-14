@@ -1,0 +1,149 @@
+ASSIGNMENT: DEVELOP AND DEPLOY A BASIC SMART CONTRACT USING SOLIDITY
+
+PROJECT: SIMPLE STUDENT RECORD SMART CONTRACT
+
+This assignment uses Remix IDE, an online Solidity development
+environment. No software installation is required.
+
+1.  OBJECTIVE
+
+Create a basic smart contract that can: - Store a student’s name. -
+Store a student’s roll number. - Retrieve the stored student details. -
+Update the student details.
+
+2.  OPEN REMIX IDE
+
+3.  Open a web browser.
+
+4.  Visit https://remix.ethereum.org/
+
+5.  Wait for Remix IDE to load.
+
+6.  In the File Explorer, create a new file named StudentRecord.sol.
+
+7.  WRITE THE SMART CONTRACT
+
+Copy the following Solidity code into StudentRecord.sol:
+
+// SPDX-License-Identifier: MIT pragma solidity ^0.8.20;
+
+contract StudentRecord {
+
+    string public studentName;
+    uint public rollNumber;
+
+    // Store student details
+    function setDetails(
+        string memory _name,
+        uint _rollNumber
+    ) public {
+        studentName = _name;
+        rollNumber = _rollNumber;
+    }
+
+    // Retrieve student details
+    function getDetails()
+        public
+        view
+        returns (string memory, uint)
+    {
+        return (studentName, rollNumber);
+    }
+
+}
+
+4.  COMPILE THE CONTRACT
+
+5.  Open the Solidity Compiler tab on the left side of Remix.
+
+6.  Select compiler version 0.8.20, or another compatible 0.8.x version.
+
+7.  Click the Compile StudentRecord.sol button.
+
+8.  Confirm that compilation succeeds and that Remix displays a green
+    tick or successful compilation message.
+
+9.  DEPLOY THE CONTRACT
+
+10. Open the Deploy & Run Transactions tab.
+
+11. Under Environment, select Remix VM.
+
+12. Under Contract, select StudentRecord.
+
+13. Click the orange Deploy button.
+
+14. Find the deployed StudentRecord contract under Deployed Contracts.
+
+15. Expand it to see the available functions.
+
+Note: Remix VM deploys the contract to a local blockchain environment
+inside Remix. This is suitable for a basic practical demonstration
+unless the faculty specifically requires deployment to a public test
+network.
+
+6.  TEST THE CONTRACT
+
+TEST 1: STORE STUDENT DETAILS
+
+1.  Under the deployed StudentRecord contract, find the setDetails
+    function.
+2.  Enter the following values:
+    -   Name: Rahul
+    -   Roll number: 101
+3.  Click setDetails.
+4.  Wait for the transaction to complete successfully.
+
+TEST 2: RETRIEVE STUDENT DETAILS
+
+1.  Click the getDetails function.
+2.  Check the returned values. The expected result is:
+    -   Student name: Rahul
+    -   Roll number: 101
+
+TEST 3: UPDATE STUDENT DETAILS
+
+1.  In setDetails, enter:
+    -   Name: Amit
+    -   Roll number: 102
+2.  Click setDetails.
+3.  Wait for the transaction to complete.
+4.  Click getDetails again.
+5.  Confirm that the updated result is:
+    -   Student name: Amit
+    -   Roll number: 102
+6.  WHAT TO EXPLAIN TO THE FACULTY
+
+You can explain:
+
+“I developed a basic smart contract using Solidity in Remix IDE. The
+smart contract is called StudentRecord. It stores student information
+such as name and roll number on the blockchain. I compiled and deployed
+the contract using Remix VM. After deployment, I tested the functions by
+inserting student details, retrieving them, and updating them. The
+results demonstrate that the smart contract is functioning
+successfully.”
+
+8.  SCREENSHOTS AND COMPLETION CHECKLIST
+
+Take screenshots of your actual work in Remix IDE. Capture: - The
+Solidity code in StudentRecord.sol. - Successful compilation. - The
+selected Remix VM environment and deployed contract. - The setDetails
+transaction with the initial student details. - The getDetails output
+showing Rahul and 101. - The updated details and getDetails output
+showing Amit and 102.
+
+Final checklist: [ ] Create the Solidity file. [ ] Enter the smart
+contract code. [ ] Compile the contract successfully. [ ] Deploy using
+Remix VM. [ ] Insert student details. [ ] Retrieve student details. [ ]
+Update student details. [ ] Take screenshots of compilation, deployment,
+and test outputs.
+
+9.  RECOMMENDATION
+
+For this basic assignment, Remix VM is sufficient unless the faculty
+specifically asks for deployment to a public test network. You do not
+need to install MetaMask, configure a wallet, or pay for blockchain
+transactions when using Remix VM.
+
+END OF ASSIGNMENT INSTRUCTIONS
