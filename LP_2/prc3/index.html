@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Registration Form</h1>
+
+    <button type="button" onclick="changeTheme()">
+        Change Theme
+    </button>
+
+    <h3>Registration closes in:</h3>
+    <p id="timer">10</p>
+
+    <button type="button" onclick="toggleInfo()">
+        Show/Hide Information
+    </button>
+
+    <p id="info" style="display:none;">
+        Please fill all details correctly.
+    </p>
+
+    <form id="regForm">
+
+        <label>Name:</label>
+        <input type="text" id="name">
+        <p id="nameError" class="error"></p>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+        <p id="emailError" class="error"></p>
+
+        <label>Mobile Number:</label>
+        <input type="text" id="mobile">
+        <p id="mobileError" class="error"></p>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+        <p id="passwordError" class="error"></p>
+
+        <label>Confirm Password:</label>
+        <input type="password" id="confirm">
+        <p id="confirmError" class="error"></p>
+
+        <label>Course:</label>
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="BCA">BCA</option>
+            <option value="BSc">BSc</option>
+            <option value="BTech">BTech</option>
+        </select>
+        <p id="courseError" class="error"></p>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <h2 id="result"></h2>
+
+    <button type="button" onclick="changeText()">
+        Change Text Style
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

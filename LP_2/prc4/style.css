@@ -1,0 +1,65 @@
+
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+input, select {
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.events {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px gray;
+}
+
+.card h3 {
+    color: navy;
+}
+
+.card p {
+    color: #444;
+}
+
+#noResult {
+    color: red;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .events {
+        flex-direction: column;
+    }
+
+    .card {
+        width: auto;
+    }
+
+    input, select {
+        max-width: 100%;
+    }
+}
